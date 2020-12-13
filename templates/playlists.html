@@ -1,0 +1,37 @@
+{% include "partials/head.html"%}
+<div class="container">
+	<h3>Playlists suited for you with
+		<em>{{bpm}} bpm</em>
+	</h3>
+
+
+
+	<table class = "styled-table">
+		<thead>
+		<tr>
+			<th>Playlist Name</th>
+			<th>Creator</th>
+			<th>Number of Tracks</th>
+		</tr>
+		</thead>
+		{% for playlist in results %}
+		<tr>
+			<td>
+				{% if playlist.images %}
+					<img src="{{playlist.images[-1].url}}" alt="{{playlist.name}}">
+				{% endif %}
+				<a href="{{playlist.external_urls.spotify}}">
+					{{ playlist.name }}
+				</a>
+			<p>"{{playlist.description}}"</p>
+			</td>
+			<td>
+				<a href = "{{playlist.owner.external_urls.spotify}}">
+					{{playlist.owner.display_name}}
+				</a>
+			</td>
+			<td>{{playlist.tracks.total}}</td>
+		</tr>
+		{% endfor %}
+	</table>
+</div>

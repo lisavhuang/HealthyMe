@@ -1,0 +1,41 @@
+{% include 'partials/head.html' %}	
+	<h3>Welcome back!</h3>
+	<h3>Today: {{today}}</h3>
+	<FORM action = "/home" method = "POST">	
+		<input type = "submit" name = "prev" value = "&lt">
+		<input type = "submit" name = "next" value = "&gt">
+	</FORM>
+	<h3>{{sun}}-{{sat}}</h3>
+	<div id = "canvasWrapper" style=" margin:auto;position:block;max-width:75%;max-height:75%;">	
+		<canvas id = "bar_chart" style = "display: block; height: 300px;width:300px"></canvas>
+	</div>
+	<script>
+	new Chart(document.getElementById("bar_chart"), {
+	    type: 'bar',
+	    data: {
+	    	labels: {{x_data}},
+	    	datasets: [
+			{
+				label: "{{x_labels}}",
+				backgroundColor: "#FFE66D",
+		  		data: {{y_data}}
+			}
+	      	]	
+	    },
+	    options: {
+	    	legend: { display: false },
+	    	title: {
+				display: true,
+			text:"{{title}}",
+	      	},
+			maintainAspectRatio:false,	
+			responsive: true
+	    }
+	});
+	</script>
+	<p>Your total distance is: {{total_distance}} miles</p>
+	<FORM action= "/tips" method = "POST">
+		<input type = "submit" name = "tips" value = "tips">
+	</FORM>
+</body>
+</html>

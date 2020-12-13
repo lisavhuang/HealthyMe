@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+	<meta charset = "utf-8"/>
+	<title>Data Compilation</title>
+	<meta name = "author" content= "Lisa V Huang">
+</head>
+
+<body>
+	<h1>{{today}}</h1>
+	<form id = "date_selection_form" action = "/select" method = "POST" enctype = "multipart/form-data"
+		<select name = years method = "GET" action "/select">
+			{% for year in years %}
+			<option value = "{{year}}" SELECTED> {{year}}</option>
+			{% endfor %}
+		</select>
+		<select name = months method = "GET" action"/select">
+			{% for month in months %}
+			<option value = "{{month}}" SELECTED> {{month}}</option>
+			{% endfor %}
+		</select>
+		<select name = weeks method = "GET" action "/select">
+			{% for week in weeks %}
+			<option value = "{{week}}" SELECTED> {{week}} </option>
+			{% endfor %}
+		</select>
+	<input type = "submit" value = "Submit">
+	</form>
+	{{table}}
+</body>
+</html>
