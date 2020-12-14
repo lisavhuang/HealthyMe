@@ -2,10 +2,12 @@
 	<h3>Welcome back!</h3>
 	<h3>Today: {{today}}</h3>
 	<FORM action = "/home" method = "POST">	
-		<input type = "submit" name = "prev" value = "&lt">
-		<input type = "submit" name = "next" value = "&gt">
+		<div class = "horizontal-box">
+			<input type = "submit" name = "prev" value = "&lt">
+			<h3>{{sun}}-{{sat}}</h3>
+			<input type = "submit" name = "next" value = "&gt">
+		</div>
 	</FORM>
-	<h3>{{sun}}-{{sat}}</h3>
 	<div id = "canvasWrapper" style=" margin:auto;position:block;max-width:75%;max-height:75%;">	
 		<canvas id = "bar_chart" style = "display: block; height: 300px;width:300px"></canvas>
 	</div>

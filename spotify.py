@@ -8,8 +8,9 @@ import requests
 
 
 #  Client Keys
-CLIENT_ID = "cddc04d6ae004f9ab86d2db917ed4331"
-CLIENT_SECRET = "406d5edb451443ffb8adb83b158a246d"
+#Can get one from making an account on the spotify devlelopers website
+CLIENT_ID = ""
+CLIENT_SECRET = ""
 
 # Spotify URLS
 SPOTIFY_AUTH_URL = "https://accounts.spotify.com/authorize"

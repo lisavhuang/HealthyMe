@@ -9,7 +9,9 @@
 	<table class = "styled-table">
 		<thead>
 		<tr>
+			<th></th>
 			<th>Playlist Name</th>
+			<th>Description</th>
 			<th>Creator</th>
 			<th>Number of Tracks</th>
 		</tr>
@@ -18,13 +20,15 @@
 		<tr>
 			<td>
 				{% if playlist.images %}
-					<img src="{{playlist.images[-1].url}}" alt="{{playlist.name}}">
+					<img src="{{playlist.images[0].url}}" alt="{{playlist.name}}">
 				{% endif %}
+			</td>
+			<td>
 				<a href="{{playlist.external_urls.spotify}}">
 					{{ playlist.name }}
 				</a>
-			<p>"{{playlist.description}}"</p>
 			</td>
+			<td>{{playlist.description}}</td>
 			<td>
 				<a href = "{{playlist.owner.external_urls.spotify}}">
 					{{playlist.owner.display_name}}

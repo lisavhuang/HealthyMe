@@ -1,19 +1,42 @@
 header{
-	background-color:#B9E6FF;
-	font_family:"Sriracha";
-
+	font-family:"Sriracha";
+	height:50px;
+	width:auto;
 }
-.nav-bar a{
+img{
+	padding:10px;
+	width:150px;
+	height:auto;
+}
+.nav-bar{
+	height:auto;
+	width:auto;
+}
+.product-name{
+	float:left;
+	color:#CD4631;
+	text-align:center;
+	padding:14px 16px;
+	text-decoration:None;
+	font-size:20px;
+}
+.horizontal-box {
+	text-align:center;
+	float:left;
+	display:flex;
+	padding: 5px 5px;
+}
+
+header .nav-bar a{
 	float: left;
-	color: #f2f2f2;
+	color: black;
 	text-align: center;
-	padding: 14px 16px;
+	padding: 16px 10px;
 	text-decoration: none;
 	font-size: 17px;
 }
-.nav-bar a.hover{
-	background-color: #ddd;
-	color:black;
+header .nav-bar a:hover{
+	color:grey;
 }
 body{
 	font-family:"Raleway",sans-serif;
@@ -28,7 +51,7 @@ body{
 }
 
 .styled-table thead tr {
-    background-color: #FFE66D;
+    background-color: #F5CC00;
     color: #ffffff;
     text-align: left;
 }
@@ -46,7 +69,7 @@ body{
 }
 
 .styled-table tbody tr:last-of-type {
-    border-bottom: 2px solid #009879;
+    border-bottom: 2px solid #FFE66D;
 }
 
 .styled-table tbody tr.active-row {
